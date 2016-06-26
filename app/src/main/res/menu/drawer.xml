@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"
+            />
+
+        <item
+            android:id="@+id/bank_detail_id"
+            android:checked="false"
+            android:icon="@drawable/ic_rupee"
+            android:title="@string/bank_details" />
+
+        <item
+            android:id="@+id/social_account_id"
+            android:checked="false"
+            android:icon="@drawable/ic_social_media"
+            android:title="@string/social_account_details" />
+
+        <item
+            android:id="@+id/ecom_details_id"
+            android:checked="false"
+            android:icon="@drawable/ic_ecommerce"
+            android:title="@string/ecom_details" />
+
+        <item
+            android:id="@+id/setting_id"
+            android:checked="false"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/action_settings"/>
+
+    </group>
+</menu>

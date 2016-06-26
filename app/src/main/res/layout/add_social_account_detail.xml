@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:text="@string/type"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_name_spinner_title"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/type"
+            android:prompt="@string/bank_name_spinner_title">
+            <requestFocus/>
+        </Spinner>
+
+        <TextView
+            android:id="@+id/textView_enter_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:text="@string/email_address"
+            android:layout_below="@+id/type_name_spinner_title"
+            android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/email_address_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/textView_enter_email"
+                android:textSize="15sp"
+                android:ems="10"
+                android:hint="username@example.com"
+                >
+                <requestFocus/>
+            </EditText>
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/email_address_editText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:hint="@string/pass_hint"
+            android:text="@string/pass_hint"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/password_editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/password_text"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            android:ems="10"
+            android:hint="@string/pass_hint"
+            android:maxLength="15">
+        </EditText>
+
+        <TextView
+            android:id="@+id/confirm_password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/password_editText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:text="@string/confirm_password_text"
+            android:maxLength="15"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/confirm_password_editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/confirm_password_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/confirm_password_text">
+        </EditText>
+
+        <TextView
+            android:id="@+id/display_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/confirm_password_editText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="12sp"
+            android:text="@string/display_text"
+            android:hint="Diplayed to user"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/display_editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/display_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Unique Name"
+            android:maxLength="20">
+        </EditText>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/password_eye"
+            android:layout_alignTop="@+id/password_editText"
+            android:src="@drawable/password_eye_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"  />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/confirm_password_eye"
+            android:src="@drawable/password_eye_view"
+            android:layout_alignTop="@+id/confirm_password_editText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPaddingLeft="1dp"
+        card_view:cardBackgroundColor="#66B2FF"
+        card_view:cardElevation="5dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add_bank_details"
+                android:contentDescription="@string/example_txt"
+                android:id="@+id/card_image"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_txt"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/card_image"
+                android:layout_toEndOf="@+id/card_image"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#ffffff"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:textStyle="bold"
+                android:id="@+id/count_id"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

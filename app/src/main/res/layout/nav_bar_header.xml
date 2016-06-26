@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:orientation="vertical"
+    android:paddingBottom="3dp"
+    android:background="#a0b9ff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_bar_title_id"
+        android:text="@string/app_name"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp"
+        android:id="@+id/username"
+        android:layout_above="@+id/email"
+        android:layout_alignLeft="@+id/nav_bar_title_id"
+        android:layout_alignStart="@+id/nav_bar_title_id" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="passwordsafe@gmail.com"
+        android:id="@+id/email"
+        android:gravity="left"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username" />
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/in_app_vibration"
+        android:id="@+id/vibration"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/in_app_sound"
+        android:id="@+id/sound"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/vibration"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/password_expiry_date"
+        android:id="@+id/password_expiry_date"
+        android:layout_below="@+id/sound"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/zero"
+        android:id="@+id/zero_textView"
+        android:layout_alignTop="@+id/password_expiry_date"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:clickable="true"/>
+
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sms_otp"
+        android:id="@+id/sms_otp_switch"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/password_expiry_date"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

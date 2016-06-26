@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:contentDescription="Bank Images"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_bank"
+        android:padding="15dp"
+        android:id="@+id/bank_img"/>
+
+
+
+    <TextView
+        android:text="TextView"
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:gravity="start|center_vertical"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+    </TextView>
+
+</LinearLayout>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rakeshkr.passwordsafe">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.NETWORK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ApplicationSpecific.LockActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.SelectionActivity"
+            android:label="Select"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".ApplicationSpecific.LockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ChangePasswordActivity"
+            android:label="Change Password"
+            android:parentActivityName=".ApplicationSpecific.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ForgotPasswordActivity"
+            android:label="Forgot Password"
+            android:parentActivityName=".ApplicationSpecific.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bank.AddNewBankDetail"
+            android:label="Add Bank Account"
+            android:parentActivityName=".ApplicationSpecific.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialAccount.AddNewSocialAccountDetail"
+            android:label="Add Social Account"
+            android:parentActivityName=".ApplicationSpecific.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bank.ListOfBankDetails"
+            android:label="Bank Accounts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialAccount.ListOfSocialAccountDetails"
+            android:label="Social Accounts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bank.UpdateIndividualBankDetails"
+            android:label="Edit"
+            android:parentActivityName=".Bank.ListOfBankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialAccount.UpdateIndividualSocialAccountDetails"
+            android:label="Edit"
+            android:parentActivityName=".SocialAccount.ListOfSocialAccountDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bank.DisplayIndividualBankDetails"
+            android:label="Bank Account"
+            android:parentActivityName=".Bank.ListOfBankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialAccount.DisplayIndividualSocialAccountDetails"
+            android:label="Social account"
+            android:parentActivityName=".SocialAccount.ListOfSocialAccountDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterFirstTime"
+            android:label="Register"
+            android:parentActivityName=".ApplicationSpecific.LockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ChangeEmailActivity"
+            android:label="Change Email"
+            android:parentActivityName=".ApplicationSpecific.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ApplicationSummaryActivity"
+            android:label="Profile"
+            android:parentActivityName=".ApplicationSpecific.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ValidatePin"
+            android:label="Login Please"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ecommerce.AddNewEcommerceDetail"
+            android:label="Add New Entry"
+            android:parentActivityName=".ApplicationSpecific.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ecommerce.ListOfEcommerceAccountDetails"
+            android:label="E-Com Accounts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ecommerce.DisplayIndividualEcommerceAccountDetails"
+            android:label="Display"
+            android:parentActivityName=".ApplicationSpecific.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ecommerce.UpdateIndividualEcommerceAccountDetails"
+            android:label="Update"
+            android:parentActivityName=".ApplicationSpecific.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.NotificationSettings"
+            android:label="Notification Settings"
+            android:parentActivityName=".ApplicationSpecific.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.ApplicationLocked"
+            android:label="Unlock The Application"
+            android:parentActivityName=".ApplicationSpecific.LockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeRed"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.WelcomeActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterUsernameActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterPasswordActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterEmailActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterMobileActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.SetupAllCredentialsActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationSpecific.RegisterAlgoAndSaltActivity"
+            android:label="Welcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

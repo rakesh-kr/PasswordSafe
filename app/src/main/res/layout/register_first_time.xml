@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_view_id"
+    android:layout_width="240dp"
+    android:layout_height="285dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/popup_shape">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/register_txt_view"
+    android:orientation="horizontal"
+
+    >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/plz_register"
+        android:id="@+id/register_txt"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:background="#243A6A"/>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:layout_below="@+id/register_txt_view"
+        android:id="@+id/info"
+        android:padding="10dp"
+        android:textStyle="bold"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:id="@+id/register_btn"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/info"
+
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_now"
+        android:id="@+id/not_now"
+        android:layout_alignTop="@+id/register_btn"
+        android:layout_alignRight="@+id/info"
+        android:layout_alignEnd="@+id/info" />
+</RelativeLayout>

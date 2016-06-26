@@ -1,0 +1,41 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LockActivity">
+
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/delete"
+        android:orderInCategory="0"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_delete"
+        />
+
+    <item
+        android:id="@+id/action_edit"
+        android:title="@string/edit"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_edit"
+        />
+
+
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/help"
+        android:orderInCategory="2"
+        app:showAsAction="collapseActionView"
+        android:icon="@drawable/ic_help"
+        />
+
+    <item
+        android:id="@+id/menu_item_share"
+        app:showAsAction="collapseActionView"
+        android:title="@string/share"
+        android:actionProviderClass=
+            "android.widget.ShareActionProvider" />
+
+
+</menu>

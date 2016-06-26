@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_summary_relative_view"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pro_pic">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/member_imview"
+                android:background="#3399FF"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pro_pic"
+            android:text="@string/name"
+            android:layout_marginTop="10dp"
+            android:id="@+id/name_txt"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_editTxt"
+            android:layout_below="@id/name_txt"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:enabled="false"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_editTxt"
+            android:text="@string/email_address"
+            android:layout_marginTop="10dp"
+            android:id="@+id/email_address_txt"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_address_editText"
+            android:layout_below="@id/email_address_txt"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:enabled="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_address_editText"
+            android:text="@string/mobile"
+            android:layout_marginTop="10dp"
+            android:id="@+id/mobile_txt"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobile_number_editTxt"
+            android:layout_below="@id/mobile_txt"
+            android:inputType="phone"
+            android:textColor="#000000"
+            android:enabled="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mobile_number_editTxt"
+            android:text="@string/no_of_bank_detail_txt"
+            android:layout_marginTop="10dp"
+            android:id="@+id/no_of_bank_detail_txt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/display_no_of_bank_detail"
+            android:layout_below="@id/no_of_bank_detail_txt"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_no_of_bank_detail"
+            android:text="@string/no_of_social_detail_txt"
+            android:layout_marginTop="10dp"
+            android:id="@+id/no_of_social_detail_txt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/display_no_of_social_detail"
+            android:layout_below="@id/no_of_social_detail_txt"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_no_of_social_detail"
+            android:text="@string/no_of_ecommerce_detail_txt"
+            android:layout_marginTop="10dp"
+            android:id="@+id/no_of_ecommerce_detail_txt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/display_no_of_ecommerce_detail"
+            android:layout_below="@id/no_of_ecommerce_detail_txt"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display_no_of_ecommerce_detail"
+            android:text="@string/last_modified_date_txt"
+            android:layout_marginTop="10dp"
+            android:id="@+id/last_modified_date_txt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/display_last_modified_date"
+            android:layout_below="@id/last_modified_date_txt"
+            android:enabled="false"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

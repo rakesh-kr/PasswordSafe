@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:id="@+id/appName"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag_line"
+        android:layout_below="@+id/appName"
+        android:layout_alignRight="@+id/appName"
+        android:layout_alignEnd="@+id/appName"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_below="@+id/appName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/editt_text_style"
+        android:drawableLeft="@drawable/ic_lock_icon"
+        android:drawableStart="@drawable/ic_lock_icon"
+        android:ellipsize="start"
+        android:textColor="#25252D"
+        android:gravity="center"
+        android:hint="@string/pass_hint"/>
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+
+        android:id="@+id/keypad">
+
+        <Button android:text="@string/one"
+            android:id="@+id/one"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"
+            />
+
+        <Button android:text="@string/two"
+            android:id="@+id/two"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/three"
+            android:id="@+id/three"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+
+        <ImageButton
+            android:contentDescription="@string/back"
+
+            android:id="@+id/back"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_rowSpan="2"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"
+            android:src="@drawable/ic_backspace"/>
+
+        <Button android:text="@string/four"
+            android:id="@+id/four"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/five"
+            android:id="@+id/five"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/six"
+            android:id="@+id/six"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/seven"
+            android:id="@+id/seven"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/eight"
+            android:id="@+id/eight"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button android:text="@string/nine"
+            android:id="@+id/nine"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
+            android:text="@string/verify"
+            android:id="@+id/verify"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+        <Button
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill"
+            android:text="@string/zero"
+            android:id="@+id/zero"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:background="@drawable/blue_button"
+            style="@style/ButtonText"/>
+
+    </GridLayout>
+
+
+
+
+</RelativeLayout>
